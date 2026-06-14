@@ -1,0 +1,155 @@
+{
+  "common": {
+    "appName": "Goldi",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "done": "Done",
+    "confirm": "Confirm",
+    "back": "Back",
+    "close": "Close",
+    "ok": "OK"
+  },
+  "tabs": {
+    "kids": "Kids",
+    "standingOrders": "Standing orders",
+    "settings": "Settings"
+  },
+  "pin": {
+    "setupTitle": "Create a parent PIN",
+    "setupSubtitle": "Protect money changes and settings. Kids can still view balances.",
+    "enterTitle": "Enter parent PIN",
+    "enterSubtitle": "Confirm it's you to continue.",
+    "confirmTitle": "Confirm your PIN",
+    "mismatch": "PINs don't match. Try again.",
+    "wrong": "Wrong PIN. Try again.",
+    "changeTitle": "Change PIN",
+    "currentPin": "Current PIN",
+    "newPin": "New PIN",
+    "unlock": "Unlock",
+    "forgot": "PIN is required for parent actions"
+  },
+  "kids": {
+    "title": "Kids",
+    "totalBalance": "Total balance",
+    "accountsCount_one": "{{count}} account",
+    "accountsCount_other": "{{count}} accounts",
+    "addChild": "Add child",
+    "emptyTitle": "No kids yet",
+    "emptySubtitle": "Add your first child to start their savings journey with Goldi."
+  },
+  "child": {
+    "accounts": "Accounts",
+    "addAccount": "Add account",
+    "editChild": "Edit child",
+    "deleteChild": "Delete child",
+    "deleteConfirmTitle": "Delete child?",
+    "deleteConfirmMessage": "This permanently deletes {{name}} and all their accounts and history.",
+    "emptyAccountsTitle": "No accounts yet",
+    "emptyAccountsSubtitle": "Create an account like “Savings” or “Pocket money”.",
+    "name": "Name",
+    "namePlaceholder": "e.g. Mia",
+    "color": "Color",
+    "emoji": "Avatar",
+    "newTitle": "New child",
+    "editTitle": "Edit child"
+  },
+  "account": {
+    "balance": "Balance",
+    "history": "History",
+    "addMoney": "Add money",
+    "removeMoney": "Remove money",
+    "editAccount": "Edit account",
+    "deleteAccount": "Delete account",
+    "deleteConfirmTitle": "Delete account?",
+    "deleteConfirmMessage": "This permanently deletes {{name}} and its history.",
+    "emptyHistoryTitle": "No transactions yet",
+    "emptyHistorySubtitle": "Add or remove money to see it here.",
+    "name": "Name",
+    "namePlaceholder": "e.g. Savings",
+    "color": "Color",
+    "newTitle": "New account",
+    "editTitle": "Edit account"
+  },
+  "transaction": {
+    "addTitle": "Add money",
+    "removeTitle": "Remove money",
+    "amount": "Amount",
+    "comment": "Comment",
+    "commentPlaceholderDeposit": "e.g. Birthday gift",
+    "commentPlaceholderWithdrawal": "e.g. Toy shop",
+    "date": "Date",
+    "invalidAmount": "Please enter a valid amount.",
+    "deleteConfirmTitle": "Delete entry?",
+    "deleteConfirmMessage": "This removes the transaction and updates the balance.",
+    "types": {
+      "deposit": "Deposit",
+      "withdrawal": "Withdrawal",
+      "standing_order": "Standing order"
+    }
+  },
+  "standingOrders": {
+    "title": "Standing orders",
+    "subtitle": "Recurring pocket money & allowances",
+    "addOrder": "Add standing order",
+    "newTitle": "New standing order",
+    "editTitle": "Edit standing order",
+    "emptyTitle": "No standing orders",
+    "emptySubtitle": "Set up recurring pocket money, e.g. €1 every week.",
+    "selectAccount": "Account",
+    "selectAccountPlaceholder": "Choose an account",
+    "amount": "Amount per payment",
+    "direction": "Direction",
+    "interval": "Repeat",
+    "startDate": "Starts on",
+    "comment": "Comment",
+    "commentPlaceholder": "e.g. Weekly pocket money",
+    "nextRun": "Next: {{date}}",
+    "active": "Active",
+    "paused": "Paused",
+    "pause": "Pause",
+    "resume": "Resume",
+    "deleteConfirmTitle": "Delete standing order?",
+    "deleteConfirmMessage": "Future payments will stop. Past transactions are kept.",
+    "intervals": {
+      "weekly": "Every week",
+      "biweekly": "Every 2 weeks",
+      "monthly": "Every month"
+    },
+    "noAccountsTitle": "Add a child & account first",
+    "noAccountsSubtitle": "Standing orders pay into an account."
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "currency": "Currency",
+    "security": "Security",
+    "changePin": "Change parent PIN",
+    "data": "Data",
+    "exportJson": "Export backup (JSON)",
+    "exportCsv": "Export transactions (CSV)",
+    "importJson": "Import backup (JSON)",
+    "importConfirmTitle": "Replace all data?",
+    "importConfirmMessage": "Importing replaces all current children, accounts and history with the backup. This can't be undone.",
+    "importSuccess": "Data imported successfully.",
+    "importCanceled": "Import canceled.",
+    "importFailedTitle": "Import failed",
+    "errors": {
+      "invalidFormat": "This file isn't a valid Goldi backup.",
+      "unsupportedVersion": "This backup was made with a newer version of Goldi.",
+      "readFailed": "Couldn't read the selected file."
+    },
+    "about": "About",
+    "version": "Version",
+    "tagline": "A playful bank for little savers 🐹",
+    "languages": {
+      "en": "English",
+      "de": "Deutsch"
+    }
+  },
+  "validation": {
+    "nameRequired": "Please enter a name."
+  }
+}

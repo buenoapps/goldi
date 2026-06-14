@@ -1,0 +1,155 @@
+{
+  "common": {
+    "appName": "Goldi",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "add": "Hinzufügen",
+    "done": "Fertig",
+    "confirm": "Bestätigen",
+    "back": "Zurück",
+    "close": "Schließen",
+    "ok": "OK"
+  },
+  "tabs": {
+    "kids": "Kinder",
+    "standingOrders": "Daueraufträge",
+    "settings": "Einstellungen"
+  },
+  "pin": {
+    "setupTitle": "Eltern-PIN erstellen",
+    "setupSubtitle": "Schützt Geldänderungen und Einstellungen. Kinder können Kontostände weiterhin sehen.",
+    "enterTitle": "Eltern-PIN eingeben",
+    "enterSubtitle": "Bestätige, dass du es bist.",
+    "confirmTitle": "PIN bestätigen",
+    "mismatch": "PINs stimmen nicht überein. Versuche es erneut.",
+    "wrong": "Falsche PIN. Versuche es erneut.",
+    "changeTitle": "PIN ändern",
+    "currentPin": "Aktuelle PIN",
+    "newPin": "Neue PIN",
+    "unlock": "Entsperren",
+    "forgot": "Für Elternaktionen ist eine PIN nötig"
+  },
+  "kids": {
+    "title": "Kinder",
+    "totalBalance": "Gesamtguthaben",
+    "accountsCount_one": "{{count}} Konto",
+    "accountsCount_other": "{{count}} Konten",
+    "addChild": "Kind hinzufügen",
+    "emptyTitle": "Noch keine Kinder",
+    "emptySubtitle": "Füge dein erstes Kind hinzu und starte die Sparreise mit Goldi."
+  },
+  "child": {
+    "accounts": "Konten",
+    "addAccount": "Konto hinzufügen",
+    "editChild": "Kind bearbeiten",
+    "deleteChild": "Kind löschen",
+    "deleteConfirmTitle": "Kind löschen?",
+    "deleteConfirmMessage": "Dies löscht {{name}} sowie alle Konten und den Verlauf endgültig.",
+    "emptyAccountsTitle": "Noch keine Konten",
+    "emptyAccountsSubtitle": "Erstelle ein Konto wie „Sparen“ oder „Taschengeld“.",
+    "name": "Name",
+    "namePlaceholder": "z. B. Mia",
+    "color": "Farbe",
+    "emoji": "Avatar",
+    "newTitle": "Neues Kind",
+    "editTitle": "Kind bearbeiten"
+  },
+  "account": {
+    "balance": "Kontostand",
+    "history": "Verlauf",
+    "addMoney": "Geld hinzufügen",
+    "removeMoney": "Geld abheben",
+    "editAccount": "Konto bearbeiten",
+    "deleteAccount": "Konto löschen",
+    "deleteConfirmTitle": "Konto löschen?",
+    "deleteConfirmMessage": "Dies löscht {{name}} und den Verlauf endgültig.",
+    "emptyHistoryTitle": "Noch keine Buchungen",
+    "emptyHistorySubtitle": "Füge Geld hinzu oder hebe ab, um es hier zu sehen.",
+    "name": "Name",
+    "namePlaceholder": "z. B. Sparen",
+    "color": "Farbe",
+    "newTitle": "Neues Konto",
+    "editTitle": "Konto bearbeiten"
+  },
+  "transaction": {
+    "addTitle": "Geld hinzufügen",
+    "removeTitle": "Geld abheben",
+    "amount": "Betrag",
+    "comment": "Kommentar",
+    "commentPlaceholderDeposit": "z. B. Geburtstagsgeschenk",
+    "commentPlaceholderWithdrawal": "z. B. Spielzeugladen",
+    "date": "Datum",
+    "invalidAmount": "Bitte gib einen gültigen Betrag ein.",
+    "deleteConfirmTitle": "Eintrag löschen?",
+    "deleteConfirmMessage": "Dies entfernt die Buchung und aktualisiert den Kontostand.",
+    "types": {
+      "deposit": "Einzahlung",
+      "withdrawal": "Auszahlung",
+      "standing_order": "Dauerauftrag"
+    }
+  },
+  "standingOrders": {
+    "title": "Daueraufträge",
+    "subtitle": "Wiederkehrendes Taschengeld",
+    "addOrder": "Dauerauftrag hinzufügen",
+    "newTitle": "Neuer Dauerauftrag",
+    "editTitle": "Dauerauftrag bearbeiten",
+    "emptyTitle": "Keine Daueraufträge",
+    "emptySubtitle": "Richte wiederkehrendes Taschengeld ein, z. B. 1 € pro Woche.",
+    "selectAccount": "Konto",
+    "selectAccountPlaceholder": "Konto auswählen",
+    "amount": "Betrag pro Zahlung",
+    "direction": "Richtung",
+    "interval": "Wiederholung",
+    "startDate": "Beginnt am",
+    "comment": "Kommentar",
+    "commentPlaceholder": "z. B. Wöchentliches Taschengeld",
+    "nextRun": "Nächste: {{date}}",
+    "active": "Aktiv",
+    "paused": "Pausiert",
+    "pause": "Pausieren",
+    "resume": "Fortsetzen",
+    "deleteConfirmTitle": "Dauerauftrag löschen?",
+    "deleteConfirmMessage": "Zukünftige Zahlungen stoppen. Vergangene Buchungen bleiben erhalten.",
+    "intervals": {
+      "weekly": "Jede Woche",
+      "biweekly": "Alle 2 Wochen",
+      "monthly": "Jeden Monat"
+    },
+    "noAccountsTitle": "Erst Kind & Konto anlegen",
+    "noAccountsSubtitle": "Daueraufträge zahlen auf ein Konto ein."
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "language": "Sprache",
+    "currency": "Währung",
+    "security": "Sicherheit",
+    "changePin": "Eltern-PIN ändern",
+    "data": "Daten",
+    "exportJson": "Backup exportieren (JSON)",
+    "exportCsv": "Buchungen exportieren (CSV)",
+    "importJson": "Backup importieren (JSON)",
+    "importConfirmTitle": "Alle Daten ersetzen?",
+    "importConfirmMessage": "Beim Import werden alle aktuellen Kinder, Konten und Verläufe durch das Backup ersetzt. Dies kann nicht rückgängig gemacht werden.",
+    "importSuccess": "Daten erfolgreich importiert.",
+    "importCanceled": "Import abgebrochen.",
+    "importFailedTitle": "Import fehlgeschlagen",
+    "errors": {
+      "invalidFormat": "Diese Datei ist kein gültiges Goldi-Backup.",
+      "unsupportedVersion": "Dieses Backup wurde mit einer neueren Goldi-Version erstellt.",
+      "readFailed": "Die ausgewählte Datei konnte nicht gelesen werden."
+    },
+    "about": "Über",
+    "version": "Version",
+    "tagline": "Eine verspielte Bank für kleine Sparer 🐹",
+    "languages": {
+      "en": "English",
+      "de": "Deutsch"
+    }
+  },
+  "validation": {
+    "nameRequired": "Bitte gib einen Namen ein."
+  }
+}
