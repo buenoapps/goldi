@@ -73,6 +73,22 @@ press `w` for web. On first launch you'll be asked to create a parent PIN.
 npx tsc --noEmit
 ```
 
+### Tests
+
+Unit tests run on [`jest-expo`](https://docs.expo.dev/develop/unit-testing/):
+
+```bash
+npm test              # run once
+npm run test:watch    # watch mode
+npm run test:coverage # with a coverage report
+```
+
+The suite covers the pure logic and data layer — money formatting & parsing,
+date math, the standing-order catch-up engine, CSV export & snapshot
+validation, the salted-PIN store, secure-storage web fallback, i18n (including
+English⇄German key parity), SQLite migrations and queries (mocked DB) — plus
+context-free UI components (`Button`, `PinPad`, `EmptyState`, `ChildAvatar`).
+
 ## How standing orders work
 
 Each standing order stores a `next_run_date`. On every app launch the engine
