@@ -8,6 +8,7 @@
     "scheme": "goldi",
     "userInterfaceStyle": "automatic",
     "ios": {
+      "bundleIdentifier": "com.buenoapps.goldi",
       "icon": "./assets/expo.icon"
     },
     "android": {
@@ -17,6 +18,7 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
+      "package": "com.buenoapps.goldi",
       "predictiveBackGestureEnabled": false
     },
     "web": {
@@ -39,6 +41,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "96588047-b710-47d4-aefa-453b042b2623"
+      }
+    },
+    "owner": "buenoapps"
   }
 }
