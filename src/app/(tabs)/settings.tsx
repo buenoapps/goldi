@@ -106,6 +106,10 @@ export default function SettingsScreen() {
   return (
     <Screen edges={['bottom']} padded={false}>
       <ScrollView contentContainerStyle={styles.content}>
+        <Section title={t('settings.children')}>
+          <ActionRow label={t('settings.manageKids')} onPress={() => router.push('/kids')} last />
+        </Section>
+
         <Section title={t('settings.language')}>
           <OptionGroup options={languageOptions} value={language} onChange={setLanguage} />
         </Section>

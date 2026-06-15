@@ -6,6 +6,7 @@ import { Alert, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, View } f
 import { Button } from '@/components/Button';
 import { ColorPicker } from '@/components/forms/ColorPicker';
 import { TextField } from '@/components/forms/TextField';
+import { HeaderButton } from '@/components/HeaderButton';
 import { Screen } from '@/components/Screen';
 import { AccentPalette, Spacing } from '@/constants/theme';
 import { createAccount, deleteAccount, getAccount, updateAccount } from '@/db/queries';
@@ -61,7 +62,13 @@ export default function AccountFormScreen() {
 
   return (
     <Screen edges={['bottom']}>
-      <Stack.Screen options={{ title: isEdit ? t('account.editTitle') : t('account.newTitle') }} />
+      <Stack.Screen
+        options={{
+          title: isEdit ? t('account.editTitle') : t('account.newTitle'),
+          headerLeft: () => <HeaderButton label={t('common.cancel')} onPress={() => router.back()} />,
+          headerRight: () => <HeaderButton primary label={t('common.save')} onPress={save} />,
+        }}
+      />
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
         style={styles.flex}
@@ -78,12 +85,11 @@ export default function AccountFormScreen() {
           />
           <ColorPicker label={t('account.color')} value={color} onChange={setColor} />
 
-          <View style={styles.buttons}>
-            <Button label={t('common.save')} onPress={save} />
-            {isEdit ? (
+          {isEdit ? (
+            <View style={styles.buttons}>
               <Button label={t('account.deleteAccount')} variant="danger" onPress={remove} />
-            ) : null}
-          </View>
+            </View>
+          ) : null}
         </ScrollView>
       </KeyboardAvoidingView>
     </Screen>

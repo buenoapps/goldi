@@ -13,9 +13,15 @@
     "ok": "OK"
   },
   "tabs": {
+    "overview": "Übersicht",
     "kids": "Kinder",
     "standingOrders": "Daueraufträge",
     "settings": "Einstellungen"
+  },
+  "overview": {
+    "title": "Übersicht",
+    "summaryTitle": "Alle Kinder",
+    "standingOrders": "Daueraufträge"
   },
   "pin": {
     "setupTitle": "Eltern-PIN erstellen",
@@ -123,6 +129,8 @@
   },
   "settings": {
     "title": "Einstellungen",
+    "children": "Kinder",
+    "manageKids": "Kinder",
     "language": "Sprache",
     "currency": "Währung",
     "security": "Sicherheit",

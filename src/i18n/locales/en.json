@@ -13,9 +13,15 @@
     "ok": "OK"
   },
   "tabs": {
+    "overview": "Overview",
     "kids": "Kids",
     "standingOrders": "Standing orders",
     "settings": "Settings"
+  },
+  "overview": {
+    "title": "Overview",
+    "summaryTitle": "All kids",
+    "standingOrders": "Standing orders"
   },
   "pin": {
     "setupTitle": "Create a parent PIN",
@@ -123,6 +129,8 @@
   },
   "settings": {
     "title": "Settings",
+    "children": "Children",
+    "manageKids": "Kids",
     "language": "Language",
     "currency": "Currency",
     "security": "Security",

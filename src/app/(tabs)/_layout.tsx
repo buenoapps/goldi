@@ -33,8 +33,8 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: t('tabs.kids'),
-          tabBarIcon: ({ color }) => <TabEmoji emoji="🐹" color={color} />,
+          title: t('tabs.overview'),
+          tabBarIcon: ({ color }) => <TabEmoji emoji="🏠" color={color} />,
         }}
       />
       <Tabs.Screen

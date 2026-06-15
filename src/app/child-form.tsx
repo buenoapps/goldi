@@ -7,6 +7,7 @@ import { Button } from '@/components/Button';
 import { ColorPicker } from '@/components/forms/ColorPicker';
 import { EmojiPicker } from '@/components/forms/EmojiPicker';
 import { TextField } from '@/components/forms/TextField';
+import { HeaderButton } from '@/components/HeaderButton';
 import { Screen } from '@/components/Screen';
 import { AccentPalette, Spacing } from '@/constants/theme';
 import { createChild, deleteChild, getChild, updateChild } from '@/db/queries';
@@ -63,7 +64,13 @@ export default function ChildFormScreen() {
 
   return (
     <Screen edges={['bottom']}>
-      <Stack.Screen options={{ title: isEdit ? t('child.editTitle') : t('child.newTitle') }} />
+      <Stack.Screen
+        options={{
+          title: isEdit ? t('child.editTitle') : t('child.newTitle'),
+          headerLeft: () => <HeaderButton label={t('common.cancel')} onPress={() => router.back()} />,
+          headerRight: () => <HeaderButton primary label={t('common.save')} onPress={save} />,
+        }}
+      />
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
         style={styles.flex}
@@ -81,12 +88,11 @@ export default function ChildFormScreen() {
           <EmojiPicker label={t('child.emoji')} value={emoji} onChange={setEmoji} />
           <ColorPicker label={t('child.color')} value={color} onChange={setColor} />
 
-          <View style={styles.buttons}>
-            <Button label={t('common.save')} onPress={save} />
-            {isEdit ? (
+          {isEdit ? (
+            <View style={styles.buttons}>
               <Button label={t('child.deleteChild')} variant="danger" onPress={remove} />
-            ) : null}
-          </View>
+            </View>
+          ) : null}
         </ScrollView>
       </KeyboardAvoidingView>
     </Screen>
