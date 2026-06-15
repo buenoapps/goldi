@@ -86,11 +86,13 @@ export default function StandingOrdersScreen() {
               <View style={styles.cardTop}>
                 <View style={styles.cardInfo}>
                   <ThemedText style={styles.title}>
-                    {item.comment?.trim() || t('transaction.types.standing_order')}
-                  </ThemedText>
-                  <ThemedText themeColor="textSecondary" type="small">
                     {item.child_name} · {item.account_name}
                   </ThemedText>
+                  {item.comment?.trim() ? (
+                    <ThemedText themeColor="textSecondary" type="small">
+                      {item.comment.trim()}
+                    </ThemedText>
+                  ) : null}
                 </View>
                 <ThemedText
                   style={[

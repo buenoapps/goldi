@@ -114,6 +114,18 @@ export async function listAccountsWithBalance(childId: string): Promise<AccountW
   );
 }
 
+/** Every account across all children with its balance, for the overview. */
+export async function listAllAccountsWithBalance(): Promise<AccountWithBalance[]> {
+  const db = await getDatabase();
+  return db.getAllAsync<AccountWithBalance>(
+    `SELECT a.*, COALESCE(SUM(t.amount_cents), 0) AS balance_cents
+       FROM accounts a
+       LEFT JOIN transactions t ON t.account_id = a.id
+      GROUP BY a.id
+      ORDER BY a.created_at ASC`,
+  );
+}
+
 export async function getAccount(id: string): Promise<Account | null> {
   const db = await getDatabase();
   return db.getFirstAsync<Account>('SELECT * FROM accounts WHERE id = ?', [id]);
@@ -243,6 +255,38 @@ export async function listStandingOrdersDetailed(): Promise<StandingOrderDetaile
       JOIN children c ON c.id = a.child_id
      ORDER BY so.active DESC, so.created_at DESC
   `);
+}
+
+/** Standing orders that pay into any of a child's accounts. */
+export async function listStandingOrdersForChild(
+  childId: string,
+): Promise<StandingOrderDetailed[]> {
+  const db = await getDatabase();
+  return db.getAllAsync<StandingOrderDetailed>(
+    `SELECT so.*,
+            a.name AS account_name,
+            c.name AS child_name,
+            c.color AS child_color
+       FROM standing_orders so
+       JOIN accounts a ON a.id = so.account_id
+       JOIN children c ON c.id = a.child_id
+      WHERE c.id = ?
+      ORDER BY so.active DESC, so.created_at DESC`,
+    [childId],
+  );
+}
+
+/** Standing orders for a single account. */
+export async function listStandingOrdersForAccount(
+  accountId: string,
+): Promise<StandingOrder[]> {
+  const db = await getDatabase();
+  return db.getAllAsync<StandingOrder>(
+    `SELECT * FROM standing_orders
+      WHERE account_id = ?
+      ORDER BY active DESC, created_at DESC`,
+    [accountId],
+  );
 }
 
 /** Accounts across all children, with child name, for pickers. */

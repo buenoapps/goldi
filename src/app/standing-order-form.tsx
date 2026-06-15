@@ -7,6 +7,7 @@ import { Button } from '@/components/Button';
 import { AmountInput } from '@/components/forms/AmountInput';
 import { OptionGroup, type Option } from '@/components/forms/OptionGroup';
 import { TextField } from '@/components/forms/TextField';
+import { HeaderButton } from '@/components/HeaderButton';
 import { Screen } from '@/components/Screen';
 import { ThemedText } from '@/components/themed-text';
 import { Spacing } from '@/constants/theme';
@@ -111,7 +112,11 @@ export default function StandingOrderFormScreen() {
   return (
     <Screen edges={['bottom']}>
       <Stack.Screen
-        options={{ title: isEdit ? t('standingOrders.editTitle') : t('standingOrders.newTitle') }}
+        options={{
+          title: isEdit ? t('standingOrders.editTitle') : t('standingOrders.newTitle'),
+          headerLeft: () => <HeaderButton label={t('common.cancel')} onPress={() => router.back()} />,
+          headerRight: () => <HeaderButton primary label={t('common.save')} onPress={save} />,
+        }}
       />
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
@@ -151,12 +156,11 @@ export default function StandingOrderFormScreen() {
             placeholder={t('standingOrders.commentPlaceholder')}
           />
 
-          <View style={styles.buttons}>
-            <Button label={t('common.save')} onPress={save} />
-            {isEdit ? (
+          {isEdit ? (
+            <View style={styles.buttons}>
               <Button label={t('common.delete')} variant="danger" onPress={remove} />
-            ) : null}
-          </View>
+            </View>
+          ) : null}
         </ScrollView>
       </KeyboardAvoidingView>
     </Screen>
