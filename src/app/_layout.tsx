@@ -80,6 +80,7 @@ function Navigator() {
     headerStyle: { backgroundColor: palette.background },
     headerTintColor: palette.text,
     headerShadowVisible: false,
+    headerBackButtonDisplayMode: 'minimal',
     contentStyle: { backgroundColor: palette.background },
   } as const;
 
