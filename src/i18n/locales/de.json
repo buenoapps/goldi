@@ -153,8 +153,30 @@
     "version": "Version",
     "tagline": "Eine verspielte Bank für kleine Sparer 🐹",
     "languages": {
+      "bg": "Български",
+      "cs": "Čeština",
+      "da": "Dansk",
+      "de": "Deutsch",
+      "el": "Ελληνικά",
       "en": "English",
-      "de": "Deutsch"
+      "es": "Español",
+      "et": "Eesti",
+      "fi": "Suomi",
+      "fr": "Français",
+      "ga": "Gaeilge",
+      "hr": "Hrvatski",
+      "hu": "Magyar",
+      "it": "Italiano",
+      "lt": "Lietuvių",
+      "lv": "Latviešu",
+      "mt": "Malti",
+      "nl": "Nederlands",
+      "pl": "Polski",
+      "pt": "Português",
+      "ro": "Română",
+      "sk": "Slovenčina",
+      "sl": "Slovenščina",
+      "sv": "Svenska"
     }
   },
   "validation": {
